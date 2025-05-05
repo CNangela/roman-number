@@ -6,6 +6,9 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
+        if (number < 1 || number > 20) {
+            throw new IntegerToRomanConversionException("Il numero deve essere compreso tra 1 e 20");
+        }
         String[] romanLetters = {"X", "IX", "V", "IV", "I" };
         int[] values = {10, 9, 5, 4, 1 };
 
