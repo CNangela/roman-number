@@ -40,6 +40,11 @@ public class RomanPrinterTest {
         mockedConverter.when(() -> IntegerToRoman.convert(300)).thenReturn("CCC");
         mockedConverter.when(() -> IntegerToRoman.convert(400)).thenReturn("CD");
         mockedConverter.when(() -> IntegerToRoman.convert(500)).thenReturn("D");
+        mockedConverter.when(() -> IntegerToRoman.convert(600)).thenReturn("DC");
+        mockedConverter.when(() -> IntegerToRoman.convert(700)).thenReturn("DCC");
+        mockedConverter.when(() -> IntegerToRoman.convert(800)).thenReturn("DCCC");
+        mockedConverter.when(() -> IntegerToRoman.convert(900)).thenReturn("CM");
+        mockedConverter.when(() -> IntegerToRoman.convert(1000)).thenReturn("M");
     }
 	
     @AfterClass
@@ -273,5 +278,48 @@ public class RomanPrinterTest {
         assertEquals(expectedArt2, RomanPrinter.print(300));
         assertEquals(expectedArt3, RomanPrinter.print(400));
         assertEquals(expectedArt4, RomanPrinter.print(500));
+    }
+    @Test
+    public void PrintTest8() {
+        String expectedArt1 =
+        "  _____     _____ \n"
+        +" |  __ \\   / ____|\n"
+        +" | |  | | | |     \n"
+        +" | |  | | | |     \n"
+        +" | |__| | | |____ \n"
+        +" |_____/   \\_____|\n";
+        String expectedArt2 =
+         "  _____     _____    _____ \n"
+        +" |  __ \\   / ____|  / ____|\n"
+        +" | |  | | | |      | |     \n"
+        +" | |  | | | |      | |     \n"
+        +" | |__| | | |____  | |____ \n"
+        +" |_____/   \\_____|  \\_____|\n";
+        String expectedArt3 =
+         "  _____     _____    _____    _____ \n"
+        +" |  __ \\   / ____|  / ____|  / ____|\n"
+        +" | |  | | | |      | |      | |     \n"
+        +" | |  | | | |      | |      | |     \n"
+        +" | |__| | | |____  | |____  | |____ \n"
+        +" |_____/   \\_____|  \\_____|  \\_____|\n";
+        String expectedArt4 =
+         "   _____   __  __ \n"
+        +"  / ____| |  \\/  |\n"
+        +" | |      | \\  / |\n"
+        +" | |      | |\\/| |\n"
+        +" | |____  | |  | |\n"
+        +"  \\_____| |_|  |_|\n";
+        String expectedArt5 =
+         "  __  __ \n" 
+        +" |  \\/  |\n" 
+        +" | \\  / |\n" 
+        +" | |\\/| |\n" 
+        +" | |  | |\n" 
+        +" |_|  |_|\n";
+        assertEquals(expectedArt1, RomanPrinter.print(600));
+        assertEquals(expectedArt2, RomanPrinter.print(700));
+        assertEquals(expectedArt3, RomanPrinter.print(800));
+        assertEquals(expectedArt4, RomanPrinter.print(900));
+        assertEquals(expectedArt5, RomanPrinter.print(1000));
     }
     }
