@@ -1,20 +1,62 @@
 package it.unipd.mtss;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
+import it.unipd.mtss.RomanPrinter;
+import it.unipd.mtss.IntegerToRoman;
+import org.junit.BeforeClass;
+import org.junit.AfterClass;
 import org.junit.Test;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 
-/**
- * Unit test for simple App.
- */
-public class RomanPrinterTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+public class RomanPrinterTest {
+
+    private static MockedStatic<IntegerToRoman> mockedConverter;
+
+    @BeforeClass
+    public static void setUpMock() {
+        // Inizializza il mock statico una sola volta
+        mockedConverter = Mockito.mockStatic(IntegerToRoman.class);
+
+        // Simula i comportamenti del convertitore
+        mockedConverter.when(() -> IntegerToRoman.convert(1)).thenReturn("I");
+        mockedConverter.when(() -> IntegerToRoman.convert(2)).thenReturn("II");
+        mockedConverter.when(() -> IntegerToRoman.convert(3)).thenReturn("III");
     }
-}
+	
+			@AfterClass
+			public static void tearDownMock() {
+	    mockedConverter.close();
+		}
+
+    @Test
+    public void PrintTest1() {
+        String expectedArt1 = 
+         "  _____ \n"
+        +" |_   _|\n"
+        +"   | |  \n"
+        +"   | |  \n"
+        +"  _| |_ \n"
+        +" |_____|\n";
+        String expectedArt2 = 
+         "  _____   _____ \n"
+        +" |_   _| |_   _|\n"
+        +"   | |     | |  \n"
+        +"   | |     | |  \n"
+        +"  _| |_   _| |_ \n"
+        +" |_____| |_____|\n";
+        String expectedArt3 = 
+         "  _____   _____   _____ \n"
+        +" |_   _| |_   _| |_   _|\n"
+        +"   | |     | |     | |  \n"
+        +"   | |     | |     | |  \n"
+        +"  _| |_   _| |_   _| |_ \n"
+        +" |_____| |_____| |_____|\n";
+        assertEquals(expectedArt1, RomanPrinter.print(1));
+        assertEquals(expectedArt2, RomanPrinter.print(2));
+        assertEquals(expectedArt3, RomanPrinter.print(3));
+    }
+    
+    }
