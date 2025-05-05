@@ -1,20 +1,15 @@
 package it.unipd.mtss;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+import static org.junit.Assert.*;
 
-/**
- * Unit test for simple App.
- */
-public class IntegerToRomanTest
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class IntegerToRomanTest {
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testConvert1() {
+        assertEquals("I", IntegerToRoman.convert(1));
+        assertEquals("II", IntegerToRoman.convert(2));
+        assertEquals("III", IntegerToRoman.convert(3));
     }
+
 }
