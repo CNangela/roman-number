@@ -4,20 +4,20 @@
 ////////////////////////////////////////////////////////////////////  
 package it.unipd.mtss;
 
-public class IntegerToRoman 
-{
+public class IntegerToRoman {
     public static String convert(int number) {
-        if (number == 1){ return "I";}
-        if (number == 2){return "II";}
-        if (number == 3){return "III";}
-        if (number == 4){return "IV";}
-        if (number == 5){return "V";}
-        if (number == 6){ return "VI";}
-        if (number == 7){return "VII";}
-        if (number == 8){return "VIII";}
-        if (number == 9){return "IX";}
-        if (number == 10){return "X";}
-        return null;
+        String[] romanLetters = {"X", "IX", "V", "IV", "I" };
+        int[] values = {10, 9, 5, 4, 1 };
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < values.length; i++) {
+            while (number >= values[i]) {
+                number -= values[i];
+                result.append(romanLetters[i]);
+            }
+        }
+
+        return result.toString();
     }
-    
 }
