@@ -6,12 +6,16 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        if (number < 1 || number > 100) {
-            throw new IntegerToRomanConversionException("Il numero deve essere compreso tra 1 e 100");
+        if (number < 1 || number > 500) {
+            throw new IntegerToRomanConversionException("Il numero deve essere compreso tra 1 e 500");
         }
 
-        String[] romanLetters = { "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-        int[] values = { 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        String[] romanLetters = { "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        int[] values = { 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        //e modifico anche :
+        if (number < 1 || number > 500) {
+            throw new IntegerToRomanConversionException("Errore: conversione non supportata");
+        }        
 
         StringBuilder result = new StringBuilder();
 

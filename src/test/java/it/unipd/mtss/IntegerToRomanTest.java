@@ -55,22 +55,32 @@ public class IntegerToRomanTest {
     }
 
     @Test
+    public void testConvert7() {
+        assertEquals("CC", IntegerToRoman.convert(200));
+        assertEquals("CCC", IntegerToRoman.convert(300));
+        assertEquals("CCCIX", IntegerToRoman.convert(309));
+        assertEquals("CD", IntegerToRoman.convert(400));
+        assertEquals("CDI", IntegerToRoman.convert(401));
+        assertEquals("D", IntegerToRoman.convert(500));
+    }
+
+    @Test
     public void testEccezioneInferiore() {
         try {
             IntegerToRoman.convert(0);
             fail("Eccezione attesa non lanciata");
         } catch (IntegerToRomanConversionException e) {
-            assertEquals("Il numero deve essere compreso tra 1 e 100", e.getMessage());
+            assertEquals("Il numero deve essere compreso tra 1 e 500", e.getMessage());
         }
     }
 
     @Test
     public void testEccezioneSuperiore() {
         try {
-            IntegerToRoman.convert(101);
+            IntegerToRoman.convert(501);
             fail("Eccezione attesa non lanciata");
         } catch (IntegerToRomanConversionException e) {
-            assertEquals("Il numero deve essere compreso tra 1 e 100", e.getMessage());
+            assertEquals("Il numero deve essere compreso tra 1 e 500", e.getMessage());
         }
     }
 
