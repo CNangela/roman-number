@@ -33,4 +33,25 @@ public class IntegerToRomanTest {
         assertEquals("XIX", IntegerToRoman.convert(19));
         assertEquals("XX", IntegerToRoman.convert(20));
     }
+
+    @Test
+    public void testEccezioneInferiore() {
+        try {
+            IntegerToRoman.convert(0);
+            fail("Eccezione attesa non lanciata");
+        } catch (IntegerToRomanConversionException e) {
+            assertEquals("Il numero deve essere compreso tra 1 e 20", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testEccezioneSuperiore() {
+        try {
+            IntegerToRoman.convert(21);
+            fail("Eccezione attesa non lanciata");
+        } catch (IntegerToRomanConversionException e) {
+            assertEquals("Il numero deve essere compreso tra 1 e 20", e.getMessage());
+        }
+    }
+
 }
