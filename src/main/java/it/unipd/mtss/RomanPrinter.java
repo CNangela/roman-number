@@ -13,20 +13,20 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
 
         String[][] asciiLetters = {
-            { "  _____ ", " __      __", " __   __" },
-            { " |_   _|", " \\ \\    / /", " \\ \\ / /" },
-            { "   | |  ", "  \\ \\  / / ", "  \\ V / " },
-            { "   | |  ", "   \\ \\/ /  ", "   > <  " },
-            { "  _| |_ ", "    \\  /   ", "  / . \\ " },
-            { " |_____|", "     \\/    ", " /_/ \\_\\" }
+            { "  _____ ", " __      __", " __   __", "  _      ", "   _____ ", "  _____  ","  __  __ "},
+            { " |_   _|", " \\ \\    / /", " \\ \\ / /", " | |     ", "  / ____|"," |  __ \\ "," |  \\/  |" },
+            { "   | |  ", "  \\ \\  / / ", "  \\ V / ", " | |     ", " | |     "," | |  | |"," | \\  / |" },
+            { "   | |  ", "   \\ \\/ /  ", "   > <  ", " | |     ", " | |     "," | |  | |"," | |\\/| |" },
+            { "  _| |_ ", "    \\  /   ", "  / . \\ ", " | |____ ", " | |____ " ," | |__| |"," | |  | |"},
+            { " |_____|", "     \\/    ", " /_/ \\_\\", " |______|", "  \\_____|"," |_____/ "," |_|  |_|" }
         };
-
+        
         StringBuilder asciiArt = new StringBuilder();
 
 
         for (int row = 0; row < 6; row++) {
             for (char c : romanNumber.toCharArray()) {
-                int index = "IVX".indexOf(c);
+                int index = "IVXLCDM".indexOf(c);
                 if (index >= 0) {
                     asciiArt.append(asciiLetters[row][index]);
                 }
