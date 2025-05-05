@@ -1,57 +1,9 @@
 package it.unipd.mtss;
-import static org.mockito.Mockito.*;
 import static org.junit.Assert.assertEquals;
-import org.junit.BeforeClass;
-import org.junit.AfterClass;
 import org.junit.Test;
-import org.mockito.MockedStatic;
-import org.mockito.Mockito;
+
 
 public class RomanPrinterTest {
-    private static MockedStatic<IntegerToRoman> mockedConverter;
-    @BeforeClass
-    public static void setUpMock() {
-        // Inizializza il mock statico una sola volta
-        mockedConverter = Mockito.mockStatic(IntegerToRoman.class);
-
-        // Simula i comportamenti del convertitore
-        mockedConverter.when(() -> IntegerToRoman.convert(1)).thenReturn("I");
-        mockedConverter.when(() -> IntegerToRoman.convert(2)).thenReturn("II");
-        mockedConverter.when(() -> IntegerToRoman.convert(3)).thenReturn("III");
-        mockedConverter.when(() -> IntegerToRoman.convert(4)).thenReturn("IV");
-        mockedConverter.when(() -> IntegerToRoman.convert(5)).thenReturn("V");
-        mockedConverter.when(() -> IntegerToRoman.convert(6)).thenReturn("VI");
-        mockedConverter.when(() -> IntegerToRoman.convert(7)).thenReturn("VII");
-        mockedConverter.when(() -> IntegerToRoman.convert(8)).thenReturn("VIII");
-        mockedConverter.when(() -> IntegerToRoman.convert(9)).thenReturn("IX");
-        mockedConverter.when(() -> IntegerToRoman.convert(10)).thenReturn("X");
-        mockedConverter.when(() -> IntegerToRoman.convert(15)).thenReturn("XV");
-        mockedConverter.when(() -> IntegerToRoman.convert(19)).thenReturn("XIX");
-        mockedConverter.when(() -> IntegerToRoman.convert(20)).thenReturn("XX");
-        mockedConverter.when(() -> IntegerToRoman.convert(30)).thenReturn("XXX");
-        mockedConverter.when(() -> IntegerToRoman.convert(40)).thenReturn("XL");
-        mockedConverter.when(() -> IntegerToRoman.convert(50)).thenReturn("L");
-        mockedConverter.when(() -> IntegerToRoman.convert(60)).thenReturn("LX");
-        mockedConverter.when(() -> IntegerToRoman.convert(70)).thenReturn("LXX");
-        mockedConverter.when(() -> IntegerToRoman.convert(80)).thenReturn("LXXX");
-        mockedConverter.when(() -> IntegerToRoman.convert(90)).thenReturn("XC");
-        mockedConverter.when(() -> IntegerToRoman.convert(100)).thenReturn("C");
-        mockedConverter.when(() -> IntegerToRoman.convert(200)).thenReturn("CC");
-        mockedConverter.when(() -> IntegerToRoman.convert(300)).thenReturn("CCC");
-        mockedConverter.when(() -> IntegerToRoman.convert(400)).thenReturn("CD");
-        mockedConverter.when(() -> IntegerToRoman.convert(500)).thenReturn("D");
-        mockedConverter.when(() -> IntegerToRoman.convert(600)).thenReturn("DC");
-        mockedConverter.when(() -> IntegerToRoman.convert(700)).thenReturn("DCC");
-        mockedConverter.when(() -> IntegerToRoman.convert(800)).thenReturn("DCCC");
-        mockedConverter.when(() -> IntegerToRoman.convert(900)).thenReturn("CM");
-        mockedConverter.when(() -> IntegerToRoman.convert(1000)).thenReturn("M");
-    }
-	
-    @AfterClass
-    public static void tearDownMock() {
-        mockedConverter.close();
-    }
-
     @Test
     public void PrintTest1() {
         String expectedArt1 = 
