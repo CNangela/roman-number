@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.IntegerToRomanTest" time="0.099" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.IntegerToRomanTest" time="0.147" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lindo\OneDrive\Desktop\roman-number\target\test-classes;C:\Users\lindo\OneDrive\Desktop\roman-number\target\classes;C:\Users\lindo\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\lindo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lindo\.m2\repository\org\mockito\mockito-inline\4.7.0\mockito-inline-4.7.0.jar;C:\Users\lindo\.m2\repository\org\mockito\mockito-core\4.7.0\mockito-core-4.7.0.jar;C:\Users\lindo\.m2\repository\net\bytebuddy\byte-buddy\1.12.13\byte-buddy-1.12.13.jar;C:\Users\lindo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.13\byte-buddy-agent-1.12.13.jar;C:\Users\lindo\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number\target\test-classes;C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number\target\classes;C:\Users\angel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\angel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\angel\.m2\repository\org\mockito\mockito-inline\4.7.0\mockito-inline-4.7.0.jar;C:\Users\angel\.m2\repository\org\mockito\mockito-core\4.7.0\mockito-core-4.7.0.jar;C:\Users\angel\.m2\repository\net\bytebuddy\byte-buddy\1.12.13\byte-buddy-1.12.13.jar;C:\Users\angel\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.13\byte-buddy-agent-1.12.13.jar;C:\Users\angel\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,42 +15,42 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IT"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\lindo\AppData\Local\Temp\surefire12399232552048209487\surefirebooter17149880282467952895.jar C:\Users\lindo\AppData\Local\Temp\surefire12399232552048209487 2025-05-05T13-30-29_000-jvmRun1 surefire5171945679413225799tmp surefire_09587773993504035106tmp"/>
+    <property name="sun.java.command" value="C:\Users\angel\AppData\Local\Temp\surefire10608171945120126753\surefirebooter9682738334460287081.jar C:\Users\angel\AppData\Local\Temp\surefire10608171945120126753 2025-05-05T13-47-35_886-jvmRun1 surefire15282973257156313925tmp surefire_04895897982579901372tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\lindo\OneDrive\Desktop\roman-number\target\test-classes;C:\Users\lindo\OneDrive\Desktop\roman-number\target\classes;C:\Users\lindo\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\lindo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lindo\.m2\repository\org\mockito\mockito-inline\4.7.0\mockito-inline-4.7.0.jar;C:\Users\lindo\.m2\repository\org\mockito\mockito-core\4.7.0\mockito-core-4.7.0.jar;C:\Users\lindo\.m2\repository\net\bytebuddy\byte-buddy\1.12.13\byte-buddy-1.12.13.jar;C:\Users\lindo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.13\byte-buddy-agent-1.12.13.jar;C:\Users\lindo\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number\target\test-classes;C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number\target\classes;C:\Users\angel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\angel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\angel\.m2\repository\org\mockito\mockito-inline\4.7.0\mockito-inline-4.7.0.jar;C:\Users\angel\.m2\repository\org\mockito\mockito-core\4.7.0\mockito-core-4.7.0.jar;C:\Users\angel\.m2\repository\net\bytebuddy\byte-buddy\1.12.13\byte-buddy-1.12.13.jar;C:\Users\angel\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.13\byte-buddy-agent-1.12.13.jar;C:\Users\angel\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\lindo"/>
+    <property name="user.home" value="C:\Users\angel"/>
     <property name="user.language" value="it"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2025-01-21"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\lindo\OneDrive\Desktop\roman-number"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="basedir" value="C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lindo\AppData\Local\Temp\surefire12399232552048209487\surefirebooter17149880282467952895.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\angel\AppData\Local\Temp\surefire10608171945120126753\surefirebooter9682738334460287081.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
-    <property name="user.name" value="lindo"/>
+    <property name="user.name" value="angel"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\lindo\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\angel\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\lindo\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\angel\AppData\Local\Temp\"/>
     <property name="java.version" value="21.0.6"/>
-    <property name="user.dir" value="C:\Users\lindo\OneDrive\Desktop\roman-number"/>
+    <property name="user.dir" value="C:\Users\angel\Desktop\studi\università\appunti\II anno\Metodi e Tecnologie per lo Sviluppo Software\roman-number"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\lindo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lindo\bin;%JAVA_HOME%\bin;C:\Windows\System32\HWAudioDriverLibs;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\TDM-GCC-32\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\msys64\ucrt64\bin;C:\Program Files\dotnet;C:\Program Files\MATLAB\R2024b\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\TortoiseHg;C:\Users\lindo\AppData\Local\Microsoft\WindowsApps;C:\Users\lindo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\angel\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\angel\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Program Files\HP\HP One Agent;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\MATLAB\R2024b\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\TortoiseHg;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\angel\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\angel\AppData\Local\Programs\Python\Python313;C:\Users\angel\AppData\Local\Programs\Python\Launcher;C:\Users\angel\AppData\Local\Microsoft\WindowsApps;C:\Users\angel\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\ucrt64\bin;C:\tmp\SAM\python-3.8.10-embed-amd64;C:\tmp\SAM\python-3.8.10-embed-amd64\Scripts;C:\Program Files\Oracle\VirtualBox;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="it.unipd.mtss.IntegerToRomanTest" time="0.005"/>
+  <testcase name="shouldAnswerWithTrue" classname="it.unipd.mtss.IntegerToRomanTest" time="0.007"/>
 </testsuite>
