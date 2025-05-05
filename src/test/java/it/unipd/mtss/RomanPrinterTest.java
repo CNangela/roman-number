@@ -36,6 +36,10 @@ public class RomanPrinterTest {
         mockedConverter.when(() -> IntegerToRoman.convert(80)).thenReturn("LXXX");
         mockedConverter.when(() -> IntegerToRoman.convert(90)).thenReturn("XC");
         mockedConverter.when(() -> IntegerToRoman.convert(100)).thenReturn("C");
+        mockedConverter.when(() -> IntegerToRoman.convert(200)).thenReturn("CC");
+        mockedConverter.when(() -> IntegerToRoman.convert(300)).thenReturn("CCC");
+        mockedConverter.when(() -> IntegerToRoman.convert(400)).thenReturn("CD");
+        mockedConverter.when(() -> IntegerToRoman.convert(500)).thenReturn("D");
     }
 	
     @AfterClass
@@ -234,5 +238,40 @@ public class RomanPrinterTest {
         assertEquals(expectedArt3, RomanPrinter.print(80));
         assertEquals(expectedArt4, RomanPrinter.print(90));
         assertEquals(expectedArt5, RomanPrinter.print(100));
+    }
+    @Test
+    public void PrintTest7() {
+        String expectedArt1 =
+         "   _____    _____ \n"
+        +"  / ____|  / ____|\n"
+        +" | |      | |     \n"
+        +" | |      | |     \n"
+        +" | |____  | |____ \n"
+        +"  \\_____|  \\_____|\n";
+        String expectedArt2 =
+         "   _____    _____    _____ \n"
+        +"  / ____|  / ____|  / ____|\n"
+        +" | |      | |      | |     \n"
+        +" | |      | |      | |     \n"
+        +" | |____  | |____  | |____ \n"
+        +"  \\_____|  \\_____|  \\_____|\n";
+        String expectedArt3 =
+         "   _____   _____  \n"
+        +"  / ____| |  __ \\ \n"
+        +" | |      | |  | |\n"
+        +" | |      | |  | |\n"
+        +" | |____  | |__| |\n"
+        +"  \\_____| |_____/ \n";
+        String expectedArt4 =
+         "  _____  \n"
+        +" |  __ \\ \n"
+        +" | |  | |\n"
+        +" | |  | |\n"
+        +" | |__| |\n"
+        +" |_____/ \n";
+        assertEquals(expectedArt1, RomanPrinter.print(200));
+        assertEquals(expectedArt2, RomanPrinter.print(300));
+        assertEquals(expectedArt3, RomanPrinter.print(400));
+        assertEquals(expectedArt4, RomanPrinter.print(500));
     }
     }

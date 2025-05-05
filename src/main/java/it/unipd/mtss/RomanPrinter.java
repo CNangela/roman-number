@@ -13,12 +13,12 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
 
         String[][] asciiLetters = {
-            { "  _____ ", " __      __", " __   __", "  _      ", "   _____ " },
-            { " |_   _|", " \\ \\    / /", " \\ \\ / /", " | |     ", "  / ____|" },
-            { "   | |  ", "  \\ \\  / / ", "  \\ V / ", " | |     ", " | |     " },
-            { "   | |  ", "   \\ \\/ /  ", "   > <  ", " | |     ", " | |     " },
-            { "  _| |_ ", "    \\  /   ", "  / . \\ ", " | |____ ", " | |____ " },
-            { " |_____|", "     \\/    ", " /_/ \\_\\", " |______|", "  \\_____|" }
+            { "  _____ ", " __      __", " __   __", "  _      ", "   _____ ", "  _____  "},
+            { " |_   _|", " \\ \\    / /", " \\ \\ / /", " | |     ", "  / ____|"," |  __ \\ " },
+            { "   | |  ", "  \\ \\  / / ", "  \\ V / ", " | |     ", " | |     "," | |  | |" },
+            { "   | |  ", "   \\ \\/ /  ", "   > <  ", " | |     ", " | |     "," | |  | |" },
+            { "  _| |_ ", "    \\  /   ", "  / . \\ ", " | |____ ", " | |____ " ," | |__| |"},
+            { " |_____|", "     \\/    ", " /_/ \\_\\", " |______|", "  \\_____|"," |_____/ " }
         };
         
         StringBuilder asciiArt = new StringBuilder();
@@ -26,7 +26,7 @@ public class RomanPrinter {
 
         for (int row = 0; row < 6; row++) {
             for (char c : romanNumber.toCharArray()) {
-                int index = "IVXLC".indexOf(c);
+                int index = "IVXLCD".indexOf(c);
                 if (index >= 0) {
                     asciiArt.append(asciiLetters[row][index]);
                 }
