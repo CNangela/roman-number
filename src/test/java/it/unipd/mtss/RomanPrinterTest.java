@@ -27,6 +27,10 @@ public class RomanPrinterTest {
         mockedConverter.when(() -> IntegerToRoman.convert(4)).thenReturn("IV");
         mockedConverter.when(() -> IntegerToRoman.convert(5)).thenReturn("V");
         mockedConverter.when(() -> IntegerToRoman.convert(6)).thenReturn("VI");
+        mockedConverter.when(() -> IntegerToRoman.convert(7)).thenReturn("VII");
+        mockedConverter.when(() -> IntegerToRoman.convert(8)).thenReturn("VIII");
+        mockedConverter.when(() -> IntegerToRoman.convert(9)).thenReturn("IX");
+        mockedConverter.when(() -> IntegerToRoman.convert(10)).thenReturn("X");
     }
 	
 			@AfterClass
@@ -93,5 +97,40 @@ public class RomanPrinterTest {
         assertEquals(expectedArt3, RomanPrinter.print(6));
     }
 
+    @Test
+    public void PrintTest3() {
+        String expectedArt1 = 
+            " __      __  _____   _____ \n" 
+            + " \\ \\    / / |_   _| |_   _|\n" 
+            + "  \\ \\  / /    | |     | |  \n" 
+            + "   \\ \\/ /     | |     | |  \n" 
+            + "    \\  /     _| |_   _| |_ \n" 
+            + "     \\/     |_____| |_____|\n";
+        String expectedArt2 = 
+            " __      __  _____   _____   _____ \n" 
+            + " \\ \\    / / |_   _| |_   _| |_   _|\n" 
+            + "  \\ \\  / /    | |     | |     | |  \n" 
+            + "   \\ \\/ /     | |     | |     | |  \n" 
+            + "    \\  /     _| |_   _| |_   _| |_ \n" 
+            + "     \\/     |_____| |_____| |_____|\n";
+        String expectedArt3 = 
+              "  _____  __   __\n" 
+            + " |_   _| \\ \\ / /\n" 
+            + "   | |    \\ V / \n" 
+            + "   | |     > <  \n" 
+            + "  _| |_   / . \\ \n" 
+            + " |_____| /_/ \\_\\\n";
+        String expectedArt4 = 
+            " __   __\n" 
+            + " \\ \\ / /\n" 
+            + "  \\ V / \n" 
+            + "   > <  \n" 
+            + "  / . \\ \n" 
+            + " /_/ \\_\\\n";
+        assertEquals(expectedArt1, RomanPrinter.print(7));
+        assertEquals(expectedArt2, RomanPrinter.print(8));
+        assertEquals(expectedArt3, RomanPrinter.print(9));
+        assertEquals(expectedArt4, RomanPrinter.print(10));
+    }
     
     }

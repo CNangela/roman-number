@@ -11,27 +11,29 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
+
         String[][] asciiLetters = {
-            { "  _____ ", " __      __" },  // riga 1
-            { " |_   _|", " \\ \\    / /" },  // riga 2
-            { "   | |  ", "  \\ \\  / / " },  // riga 3
-            { "   | |  ", "   \\ \\/ /  " },  // riga 4
-            { "  _| |_ ", "    \\  /   " },  // riga 5
-            { " |_____|", "     \\/    " }   // riga 6
+            { "  _____ ", " __      __", " __   __" },
+            { " |_   _|", " \\ \\    / /", " \\ \\ / /" },
+            { "   | |  ", "  \\ \\  / / ", "  \\ V / " },
+            { "   | |  ", "   \\ \\/ /  ", "   > <  " },
+            { "  _| |_ ", "    \\  /   ", "  / . \\ " },
+            { " |_____|", "     \\/    ", " /_/ \\_\\" }
         };
-    
+
         StringBuilder asciiArt = new StringBuilder();
-    
+
+
         for (int row = 0; row < 6; row++) {
             for (char c : romanNumber.toCharArray()) {
-                int index = "IV".indexOf(c);
+                int index = "IVX".indexOf(c);
                 if (index >= 0) {
                     asciiArt.append(asciiLetters[row][index]);
                 }
             }
             asciiArt.append("\n");
         }
-    
+
         return asciiArt.toString();
     }
 }
