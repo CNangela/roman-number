@@ -4,10 +4,6 @@
 ////////////////////////////////////////////////////////////////////  
 package it.unipd.mtss;
 
-/**
- * Hello world!
- *
- */
 public class IntegerToRoman 
 {
     public static String convert(int number) {
@@ -17,6 +13,10 @@ public class IntegerToRoman
         if (number == 4){return "IV";}
         if (number == 5){return "V";}
         if (number == 6){ return "VI";}
+        if (number == 7){return "VII";}
+        if (number == 8){return "VIII";}
+        if (number == 9){return "IX";}
+        if (number == 10){return "X";}
         return null;
     }
     
