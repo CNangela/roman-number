@@ -31,6 +31,9 @@ public class RomanPrinterTest {
         mockedConverter.when(() -> IntegerToRoman.convert(8)).thenReturn("VIII");
         mockedConverter.when(() -> IntegerToRoman.convert(9)).thenReturn("IX");
         mockedConverter.when(() -> IntegerToRoman.convert(10)).thenReturn("X");
+        mockedConverter.when(() -> IntegerToRoman.convert(15)).thenReturn("XV");
+        mockedConverter.when(() -> IntegerToRoman.convert(19)).thenReturn("XIX");
+        mockedConverter.when(() -> IntegerToRoman.convert(20)).thenReturn("XX");
     }
 	
 			@AfterClass
@@ -65,7 +68,7 @@ public class RomanPrinterTest {
         assertEquals(expectedArt2, RomanPrinter.print(2));
         assertEquals(expectedArt3, RomanPrinter.print(3));
     }
-
+    
     @Test
     public void PrintTest2() {
         String expectedArt1 = 
@@ -132,5 +135,32 @@ public class RomanPrinterTest {
         assertEquals(expectedArt3, RomanPrinter.print(9));
         assertEquals(expectedArt4, RomanPrinter.print(10));
     }
-    
+
+    @Test
+    public void PrintTest4() {
+        String expectedArt1 = 
+        " __   __ __      __\n" 
+        + " \\ \\ / / \\ \\    / /\n" 
+        + "  \\ V /   \\ \\  / / \n" 
+        + "   > <     \\ \\/ /  \n" 
+        + "  / . \\     \\  /   \n" 
+        + " /_/ \\_\\     \\/    \n";
+        String expectedArt2 = 
+        " __   __  _____  __   __\n" 
+        + " \\ \\ / / |_   _| \\ \\ / /\n" 
+        + "  \\ V /    | |    \\ V / \n" 
+        + "   > <     | |     > <  \n" 
+        + "  / . \\   _| |_   / . \\ \n" 
+        + " /_/ \\_\\ |_____| /_/ \\_\\\n";
+        String expectedArt3 = 
+         " __   __ __   __\n" 
+        +" \\ \\ / / \\ \\ / /\n" 
+        +"  \\ V /   \\ V / \n" 
+        +"   > <     > <  \n" 
+        +"  / . \\   / . \\ \n" 
+        +" /_/ \\_\\ /_/ \\_\\\n";
+        assertEquals(expectedArt1, RomanPrinter.print(15));
+        assertEquals(expectedArt2, RomanPrinter.print(19));
+        assertEquals(expectedArt3, RomanPrinter.print(20));
+    }
     }
